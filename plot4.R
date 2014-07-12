@@ -26,7 +26,7 @@ mydata2$Sub_metering_2 <- as.numeric(as.character(mydata2$Sub_metering_2))
 mydata2$Sub_metering_3 <- as.numeric(as.character(mydata2$Sub_metering_3))
 
 #Create the PNG
-png("plot4.png")
+png("plot4.png", bg = "transparent")
 
 #Prepare to have 4 plots
 par(mfrow = c(2,2))
@@ -38,7 +38,7 @@ plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Global_active_power
 plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Voltage)), type = "l", ylab="Voltage", xlab = "datetime")
 
 #Create the plot in the lower left
-plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_1)), type = "l", ylab="Energy sub metering", xlab = "")
+plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_1)), type = "l", bg = "transparent", ylab="Energy sub metering", xlab = "")
 lines(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_2)), type = "l", col="Red")
 lines(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_3)), type = "l", col="Blue")
 legend("topright", c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1),col=c("black","blue","red"))

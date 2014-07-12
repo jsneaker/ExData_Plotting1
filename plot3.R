@@ -22,10 +22,10 @@ mydata2$Sub_metering_2 <- as.numeric(as.character(mydata2$Sub_metering_2))
 mydata2$Sub_metering_3 <- as.numeric(as.character(mydata2$Sub_metering_3))
 
 #Create the PNG
-png("plot3.png")
+png("plot3.png", bg = "transparent")
 
 #Create the plot
-plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_1)), type = "l", ylab="Energy sub metering", xlab = "")
+plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_1)), type = "l", bg = "transparent", ylab="Energy sub metering", xlab = "")
 lines(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_2)), type = "l", col="Red")
 lines(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Sub_metering_3)), type = "l", col="Blue")
 

@@ -23,10 +23,10 @@ mydata2$Global_active_power <- as.numeric(as.character(mydata2$Global_active_pow
 mydata2 <- subset(mydata2, !is.na(mydata2$Global_active_power))
 
 #Create the PNG
-png("plot2.png")
+png("plot2.png", bg = "transparent")
 
 #Create the plot
-plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Global_active_power)), type = "l", ylab="Global Active Power (kilowatts)", xlab = "")
+plot(as.POSIXlt(mydata2$DT), as.numeric(as.character(mydata2$Global_active_power)), type = "l", bg = "transparent", ylab="Global Active Power (kilowatts)", xlab = "")
 
 #Close it!
 dev.off()
