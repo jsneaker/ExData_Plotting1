@@ -23,11 +23,10 @@ mydata2$Global_active_power <- as.numeric(as.character(mydata2$Global_active_pow
 mydata2 <- subset(mydata2, !is.na(mydata2$Global_active_power))
 
 #Create the PNG
-png("plot1.png")
-
+png("plot1.png", bg = "transparent") 
 
 #Create the histogram
-hist(as.numeric(as.character(mydata2$Global_active_power)), breaks=20, main="Global Active Power", xlab="Global Active Power (kilowatts)", col = "Red")
+hist(as.numeric(as.character(mydata2$Global_active_power)), breaks=20, bg = "transparent", main="Global Active Power", xlab="Global Active Power (kilowatts)", col = "Red")
 
 #Close it!
 dev.off()
